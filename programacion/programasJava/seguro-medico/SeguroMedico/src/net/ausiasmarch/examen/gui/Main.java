@@ -220,10 +220,16 @@ public class Main extends javax.swing.JFrame {
         numHijos = Convert.parseInt(jTextFieldNumHijos.getText());
         
         // Obtenemos los datos de entrada y validamos los que sean numericos
-        seguroMedico.setSexo(jPanel5.toString());
+        if(jRadioButtonHombre.isSelected()){
+            seguroMedico.setSexo(jRadioButtonHombre.getText());
+        }
+        else {
+            seguroMedico.setSexo(jRadioButtonMujer.getText());
+        }
+
         seguroMedico.setEmbarazada(jCheckBoxEmbarazada.isSelected());
         seguroMedico.setCasado(jCheckBoxCasado.isSelected());
-        seguroMedico.setTrabajo(jComboBoxTrabajo.toString());
+        seguroMedico.setTrabajo(jComboBoxTrabajo.getSelectedItem().toString());
         seguroMedico.setEnfermedadCorazon(jCheckBoxEnfermedadCorazon.isSelected());
         seguroMedico.setEnfermedadOjos(jCheckBoxEnfermedadOjos.isSelected());
         seguroMedico.setEnfermedadPiel(jCheckBoxEnfermedadPiel.isSelected());

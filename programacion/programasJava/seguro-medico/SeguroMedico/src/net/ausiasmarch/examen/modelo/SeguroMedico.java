@@ -188,7 +188,7 @@ public class SeguroMedico {
     
     // DEVUELVE EL IMPORTE MENSUAL DEL SEGURO MEDICO
     public double importeMensual(){
-        return 200 + precioEnfermedad() + precioCovertura();
+        return 200 + precioEnfermedad() + precioCobertura();
     }
     
     // CALCULO DEL PRECIO ADICIONAL POR ENFERMEDADES
@@ -207,23 +207,23 @@ public class SeguroMedico {
         return precioEnfermedad;
     }
     
-    // CALCULO DEL PRECIO ADICIONAL POR COVERTURAS
-    public double precioCovertura(){
-        double precioCovertura = 0;
+    // CALCULO DEL PRECIO ADICIONAL POR COBERTURAS
+    public double precioCobertura(){
+        double precioCobertura = 0;
         
         if(coberturaOftalmologica || coberturaPediatria){
-            precioCovertura += 15;
+            precioCobertura += 15;
         }
         if(coberturaInVitro){
-            precioCovertura += 40;
+            precioCobertura += 40;
         }
         if(coberturaCorazon){
-            precioCovertura += 50;
+            precioCobertura += 50;
         }
         if(coberturaDermatologia){
-            precioCovertura += 25;
+            precioCobertura += 25;
         }
-        return precioCovertura;
+        return precioCobertura;
     }
     
     //CALCULO DEL DESCUENTO AL PRECIO ANUAL
