@@ -1,28 +1,29 @@
 package figuras;
 
 /**
- * Ejemplo: circulos.
- * Clase para representar círculos situados sobre el plano.
+ * Ejemplo: circulos. Clase para representar círculos situados sobre el plano.
+ *
  * @author Rubén Martín
  * @version 1.0
  */
 public class Circulo {
+
     /**
-        * Variables protected double. Coordenadas del centro
-        */
+     * Coordenadas del centro
+     */
     protected double x, y;
     /**
-        * Variable protected double. Radio del circulo
-        */
+     * Radio del circulo
+     */
     protected double r;
 
     /**
-        * Constructor. Crea un círculo a partir de su origen su radio.
-        *
-        * @param x: coordenada X.
-        * @param y: coordenada Y.
-        * @param r radio.
-        */
+     * Constructor. Crea un círculo a partir de su origen su radio.
+     *
+     * @param x: coordenada X.
+     * @param y: coordenada Y.
+     * @param r radio.
+     */
     public Circulo(double x, double y, double r) {
         this.x = x;
         this.y = y;
@@ -30,21 +31,31 @@ public class Circulo {
     }
 
     /**
-        * Metodo que calcula el area de este circulo
-        * @return 
-        */
+     * Metodo que calcula el area de este circulo
+     *
+     * @return devuelve el area del circulo
+     */
     // Cálculo del área de este círculo.
     public double área() {
         return Math.PI * r * r;
     }
 
-    //Indica si un punto está dentro del círculo.
+    /**
+     * Metodo que indica si un punto esta dentro del circulo
+     *
+     * @param px contiene el valor de la coordenada x del punto que queremos
+     * comprobar (X, y)
+     * @param py contiene el valor de la coordenada y del punto que queremos
+     * comprobar (x, Y)
+     * @return devuelve si el punto esta dentro del circulo o no, para ello
+     * compara la distancia con el radio.
+     */
     public boolean contiene(double px, double py) {
-        /* Calculamos la distancia de (px,py) al centro del círculo (x,y),
-         que se obtiene como raíz cuadrada de (px-x)^2+(py-y)^2 */
+        /**
+         * Variable double d. Contiene la distancia entre el punto y el radio
+         */
         double d = Math.sqrt((px - x) * (px - x) + (py - y) * (py - y));
 
-        // el círculo contiene el punto si d es menor o igual al radio
         return d <= r;
     }
 }
