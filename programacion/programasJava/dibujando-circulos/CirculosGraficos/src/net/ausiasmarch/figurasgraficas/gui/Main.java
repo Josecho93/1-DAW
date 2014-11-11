@@ -10,7 +10,7 @@ import javax.swing.UnsupportedLookAndFeelException;
 
 /**
  * Main.java
- * @author Luis
+ * @author 
  */
 public class Main extends javax.swing.JFrame {
 
@@ -428,6 +428,7 @@ public class Main extends javax.swing.JFrame {
         //Validamos el circulo
         if(circulo.validate() != 0){
             mensaje(circulo.getMensaje());
+            return;
         }
         
         //Asignamos el valor de las variables area y circunferencia

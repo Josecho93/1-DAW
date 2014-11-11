@@ -7,7 +7,7 @@ import java.awt.geom.*;
 
 /**
  *
- * @author Programador
+ * @author 
  */
 public class Circulo {
 
