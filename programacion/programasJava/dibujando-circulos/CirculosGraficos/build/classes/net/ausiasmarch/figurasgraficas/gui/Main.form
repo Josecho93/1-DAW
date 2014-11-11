@@ -207,7 +207,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="jButtonCalcular">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Calcular"/>
+            <Property name="text" type="java.lang.String" value="Calcular1"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCalcularActionPerformed"/>
@@ -391,6 +391,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Relleno"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBoxRellenoActionPerformed"/>
+          </Events>
         </Component>
         <Container class="javax.swing.JPanel" name="jPanelSelectorColorContorno">
           <Properties>

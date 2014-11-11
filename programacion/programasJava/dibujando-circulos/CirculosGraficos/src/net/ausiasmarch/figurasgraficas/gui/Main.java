@@ -88,7 +88,7 @@ public class Main extends javax.swing.JFrame {
         jTextFieldArea.setEditable(false);
         jTextFieldArea.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jButtonCalcular.setText("Calcular");
+        jButtonCalcular.setText("Calcular1");
         jButtonCalcular.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCalcularActionPerformed(evt);
@@ -184,6 +184,11 @@ public class Main extends javax.swing.JFrame {
         jPanelSelectorColor.add(jButtonColorRelleno, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 140, 100, -1));
 
         jCheckBoxRelleno.setText("Relleno");
+        jCheckBoxRelleno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxRellenoActionPerformed(evt);
+            }
+        });
 
         jPanelSelectorColorContorno.setBorder(javax.swing.BorderFactory.createTitledBorder(null, " Color  del contorno", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 12), new java.awt.Color(0, 0, 153))); // NOI18N
         jPanelSelectorColorContorno.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -538,6 +543,10 @@ public class Main extends javax.swing.JFrame {
         jSliderAzulContorno.setValue(azulContorno);
    
     }//GEN-LAST:event_jButtonColorContornoActionPerformed
+
+    private void jCheckBoxRellenoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxRellenoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBoxRellenoActionPerformed
 
     private void mensaje(String mensaje){
        JOptionPane.showMessageDialog(this,mensaje); 
