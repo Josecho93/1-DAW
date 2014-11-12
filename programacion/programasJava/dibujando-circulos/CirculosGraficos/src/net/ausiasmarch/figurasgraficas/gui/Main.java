@@ -88,7 +88,7 @@ public class Main extends javax.swing.JFrame {
         jTextFieldArea.setEditable(false);
         jTextFieldArea.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jButtonCalcular.setText("Calcular1");
+        jButtonCalcular.setText("Calcular");
         jButtonCalcular.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCalcularActionPerformed(evt);
