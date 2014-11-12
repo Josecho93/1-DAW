@@ -215,9 +215,7 @@ public class Main extends javax.swing.JFrame {
         jTextFieldImporteMensual.setText("");
         jTextFieldImporteAnual.setText("");
         
-        // Convertimos los datos de entrada
-        edad = Convert.parseInt(jTextFieldEdad.getText());
-        numHijos = Convert.parseInt(jTextFieldNumHijos.getText());
+        
         
         // Obtenemos los datos de entrada y validamos los que sean numericos
         if(jRadioButtonHombre.isSelected()){
@@ -226,7 +224,6 @@ public class Main extends javax.swing.JFrame {
         else {
             seguroMedico.setSexo(jRadioButtonMujer.getText());
         }
-
         seguroMedico.setEmbarazada(jCheckBoxEmbarazada.isSelected());
         seguroMedico.setCasado(jCheckBoxCasado.isSelected());
         seguroMedico.setTrabajo(jComboBoxTrabajo.getSelectedItem().toString());
@@ -247,6 +244,10 @@ public class Main extends javax.swing.JFrame {
             mensaje("El numero de hijos debe ser un numero entero");
             return;
         }
+        
+        // Convertimos los datos de entrada
+        edad = Convert.parseInt(jTextFieldEdad.getText());
+        numHijos = Convert.parseInt(jTextFieldNumHijos.getText());
         
         seguroMedico.setEdad(edad);
         seguroMedico.setNumHijos(numHijos);

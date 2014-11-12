@@ -154,7 +154,7 @@ public class SeguroMedico {
             return false;
         }
         // 2. Si eligió ’‘Embarazada’ o cobertura ‘Fecundación in vitro, el sexo debe ser ‘Mujer’
-        if((embarazada || coberturaInVitro) && sexo != "Mujer"){
+        if((embarazada || coberturaInVitro) && !"Mujer".equals(sexo)){
             mensaje = "Si eligió ’‘Embarazada’ o cobertura ‘Fecundación in vitro, el sexo debe ser ‘Mujer’\n";
             return false;
         }
@@ -230,7 +230,7 @@ public class SeguroMedico {
     private double descuento(){
         double descuento;
         
-        if(trabajo == "Funcionario"){
+        if("Funcionario".equals(trabajo)){
             descuento = 0.15;
         }
         else {
