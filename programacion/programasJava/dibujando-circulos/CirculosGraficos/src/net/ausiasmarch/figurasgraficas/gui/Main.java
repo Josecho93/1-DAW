@@ -10,7 +10,7 @@ import javax.swing.UnsupportedLookAndFeelException;
 
 /**
  * Main.java
- * @author 
+ * @author  Rubén Martín Martínez y Jose Maria Gascón Artal
  */
 public class Main extends javax.swing.JFrame {
 
@@ -396,10 +396,6 @@ public class Main extends javax.swing.JFrame {
         jTextFieldArea.setText("");
         
         //Validamos coordenadas x, y, grosor
-        if(!Convert.isValidInt(jTextFieldRadio.getText())){
-            mensaje("El radio debe ser un numero entero");
-            return;
-        }
         if(!Convert.isValidInt(jTextFieldGrosor.getText())){
             mensaje("El grosor debe ser un numero entero");
             return;
@@ -442,7 +438,7 @@ public class Main extends javax.swing.JFrame {
         
         //Mostramos el valor de area y circunferencia con el formato adecuado
         jTextFieldArea.setText(Convert.format(area, 2));
-        jTextFieldCircunferencia.setText(Convert.format(area, 2));
+        jTextFieldCircunferencia.setText(Convert.format(circunferencia, 2));
         
         //Comprobamos que el circulo no se sale del area de dibujo
         if(!panelDibujo.contiene(x, y, radio, radio)){

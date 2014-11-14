@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 /**
  * Clase PanelDibujo: Representa el panel sobre el que se dibujan los circulos
- * @author Programador
+ * @author  Rubén Martín Martínez y Jose Maria Gascón Artal
  */
 public class PanelDibujo extends javax.swing.JPanel {
     private boolean showGrid = false;

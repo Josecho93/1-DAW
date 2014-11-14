@@ -7,7 +7,7 @@ import java.awt.geom.*;
 
 /**
  *
- * @author 
+ * @author  Rubén Martín Martínez y Jose Maria Gascón Artal
  */
 public class Circulo {
 

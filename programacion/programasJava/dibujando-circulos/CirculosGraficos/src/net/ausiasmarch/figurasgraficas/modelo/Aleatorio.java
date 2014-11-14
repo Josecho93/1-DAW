@@ -10,7 +10,7 @@ import java.awt.Color;
 
 /**
  *
- * @author a044531254b
+ * @author  Rubén Martín Martínez y Jose Maria Gascón Artal
  */
 public class Aleatorio {
 
