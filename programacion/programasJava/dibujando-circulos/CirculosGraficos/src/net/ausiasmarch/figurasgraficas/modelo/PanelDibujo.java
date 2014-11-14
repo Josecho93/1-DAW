@@ -33,17 +33,13 @@ public class PanelDibujo extends javax.swing.JPanel {
         figuras.add(circulo);
     }
        
-     /**
-     * comprueba si el circulo esta dentro del panel de dibujo
-     */
+
     public boolean contiene(double x, double y, double ancho, double alto) {
         return ((int) x >= 0 && (int) x + (int) ancho <= getWidth() &&
                 (int) y >= 0 && (int) y + (int) alto <= getHeight());
     }
 
-   /**
-     * Establece el ancho y alto en pixel de las celdas de la rejilla
-     */
+
      public void grid(int ancho, int alto){
         if (ancho < 50 || alto < 50) {
             ancho = 50;
@@ -64,19 +60,13 @@ public class PanelDibujo extends javax.swing.JPanel {
         return isShowGrid();
     }
 
-    /**
-     * Muestra la rejilla
-     * @params showGrid
-     */
+
     public void setShowGrid(boolean showGrid) {
         this.showGrid = showGrid;
         repaint();
     }
 
-   /**
-    * Dibuja figuras sobre el panel y dibuja la rejilla
-    * @params g Graphics 
-    */
+
    @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -118,9 +108,7 @@ public class PanelDibujo extends javax.swing.JPanel {
         }      
     }
 
-    /**
-     * Dibuja un circulo en el panel de dibujo
-     */   
+
     public void dibuja(Circulo circulo) {
         figuras.add(circulo);
         repaint();
