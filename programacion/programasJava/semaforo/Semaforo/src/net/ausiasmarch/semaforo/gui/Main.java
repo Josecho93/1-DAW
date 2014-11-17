@@ -11,9 +11,10 @@ import javax.swing.UnsupportedLookAndFeelException;
  * @author  Programador
  */
 public class Main extends javax.swing.JFrame {
-
     public Main() {
+        
         initComponents();
+        
 
         setSize(430, 520);
         setLocationRelativeTo(null);
@@ -34,6 +35,7 @@ public class Main extends javax.swing.JFrame {
         jButtonVerde = new javax.swing.JButton();
         jButtonSalir = new javax.swing.JButton();
         semaforo1 = new net.ausiasmarch.semaforo.modelo.Semaforo();
+        jButtonColor = new javax.swing.JButton();
 
         jButton2.setText("jButton2");
 
@@ -47,7 +49,7 @@ public class Main extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButtonRojo.setFont(new java.awt.Font("Tahoma", 0, 24));
+        jButtonRojo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButtonRojo.setText("Rojo");
         jButtonRojo.setEnabled(false);
         jButtonRojo.addActionListener(new java.awt.event.ActionListener() {
@@ -57,7 +59,7 @@ public class Main extends javax.swing.JFrame {
         });
         getContentPane().add(jButtonRojo, new org.netbeans.lib.awtextra.AbsoluteConstraints(198, 60, 210, 50));
 
-        jButtonAmbar.setFont(new java.awt.Font("Tahoma", 0, 24));
+        jButtonAmbar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButtonAmbar.setText("Ambar");
         jButtonAmbar.setEnabled(false);
         jButtonAmbar.addActionListener(new java.awt.event.ActionListener() {
@@ -67,7 +69,7 @@ public class Main extends javax.swing.JFrame {
         });
         getContentPane().add(jButtonAmbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(198, 139, 210, 50));
 
-        jButtonVerde.setFont(new java.awt.Font("Tahoma", 0, 24));
+        jButtonVerde.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButtonVerde.setText("Verde");
         jButtonVerde.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,7 +78,7 @@ public class Main extends javax.swing.JFrame {
         });
         getContentPane().add(jButtonVerde, new org.netbeans.lib.awtextra.AbsoluteConstraints(198, 222, 210, 50));
 
-        jButtonSalir.setFont(new java.awt.Font("Tahoma", 0, 24));
+        jButtonSalir.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButtonSalir.setText("Salir");
         jButtonSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,16 +88,31 @@ public class Main extends javax.swing.JFrame {
         getContentPane().add(jButtonSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 430, 110, 40));
         getContentPane().add(semaforo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
+        jButtonColor.setText("Cambia color");
+        jButtonColor.setToolTipText("");
+        jButtonColor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonColorActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 310, 210, 50));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
 private void jButtonRojoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRojoActionPerformed
+    //Llamamos al metodo setRojo del objeto semaforo1
+    semaforo1.setRojo();
 }//GEN-LAST:event_jButtonRojoActionPerformed
 
 private void jButtonAmbarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAmbarActionPerformed
+    //Llamamos al metodo setAmbar del objeto semaforo1
+    semaforo1.setAmbar();
 }//GEN-LAST:event_jButtonAmbarActionPerformed
-
+    
 private void jButtonVerdeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVerdeActionPerformed
+    //Llamamos al metodo setVerde del objeto semaforo1
+    semaforo1.setVerde();
 }//GEN-LAST:event_jButtonVerdeActionPerformed
 
 private void jButtonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirActionPerformed
@@ -105,6 +122,10 @@ private void jButtonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-
 private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
     salir();
 }//GEN-LAST:event_formWindowClosed
+
+    private void jButtonColorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonColorActionPerformed
+        semaforo1.cambiaColor();
+    }//GEN-LAST:event_jButtonColorActionPerformed
 
 private void activaDesactivaBotones(boolean sn) {
    
@@ -144,6 +165,7 @@ private void salir() {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButtonAmbar;
+    private javax.swing.JButton jButtonColor;
     private javax.swing.JButton jButtonRojo;
     private javax.swing.JButton jButtonSalir;
     private javax.swing.JButton jButtonVerde;

@@ -8,12 +8,61 @@ package net.ausiasmarch.semaforo.modelo;
  * @author  Administrador
  */
 public class Semaforo extends javax.swing.JPanel {
-
+    //Propiedades
+    private ColorSemaforo estado;
+    
+    //Constructor
     public Semaforo() {
         initComponents();
-
-
+        estado = ColorSemaforo.ROJO;
     }
+    
+    //Metodos para cambiar el estado del color y el jLabel visible
+    public void setRojo(){
+        estado = ColorSemaforo.ROJO;
+        jLabelRojo.setVisible(true);
+        jLabelAmbar.setVisible(false);
+        jLabelVerde.setVisible(false);       
+    }
+    
+    public void setAmbar(){
+        estado = ColorSemaforo.AMBAR;
+        jLabelRojo.setVisible(false);
+        jLabelAmbar.setVisible(true);
+        jLabelVerde.setVisible(false);       
+    }
+    
+    public void setVerde(){
+        estado = ColorSemaforo.VERDE;
+        jLabelRojo.setVisible(false);
+        jLabelAmbar.setVisible(false);
+        jLabelVerde.setVisible(true);       
+    }
+    
+    // Obtiene el estado del semaforo, devuelve un enumerado
+    public ColorSemaforo getEstado(){
+        return estado;
+    }
+    
+    //Metodo para cambiar el color del semaforo segun en que estado se encuentre
+    public void cambiaColor(){
+        switch(estado){
+            case ROJO:
+                setVerde();
+                break;
+            case VERDE:
+                setAmbar();
+                break;
+            case AMBAR:
+                setRojo();
+                break;           
+        }
+    }
+    
+    
+    
+    
+    
 
  
     /** This method is called from within the constructor to
