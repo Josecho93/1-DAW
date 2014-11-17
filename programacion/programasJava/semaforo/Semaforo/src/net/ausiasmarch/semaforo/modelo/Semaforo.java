@@ -22,21 +22,24 @@ public class Semaforo extends javax.swing.JPanel {
         estado = ColorSemaforo.ROJO;
         jLabelRojo.setVisible(true);
         jLabelAmbar.setVisible(false);
-        jLabelVerde.setVisible(false);       
+        jLabelVerde.setVisible(false);
+        jLabelSemaforo.setVisible(false);
     }
     
     public void setAmbar(){
         estado = ColorSemaforo.AMBAR;
         jLabelRojo.setVisible(false);
         jLabelAmbar.setVisible(true);
-        jLabelVerde.setVisible(false);       
+        jLabelVerde.setVisible(false);
+        jLabelSemaforo.setVisible(false);
     }
     
     public void setVerde(){
         estado = ColorSemaforo.VERDE;
         jLabelRojo.setVisible(false);
         jLabelAmbar.setVisible(false);
-        jLabelVerde.setVisible(true);       
+        jLabelVerde.setVisible(true);
+        jLabelSemaforo.setVisible(false);
     }
     
     // Obtiene el estado del semaforo, devuelve un enumerado
