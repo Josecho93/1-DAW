@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package net.ausiasmarch.semaforo.modelo;
 
 /**
@@ -11,6 +10,15 @@ package net.ausiasmarch.semaforo.modelo;
  * @author a044531254b
  */
 public enum ColorSemaforo {
+    ROJO(1), AMBAR(2), VERDE(4);
 
-    ROJO, AMBAR, VERDE
+    private final int value;
+
+    ColorSemaforo(int value) {
+        this.value = value;
+    }
+
+    public int getValue() {
+        return value;
+    }
 }

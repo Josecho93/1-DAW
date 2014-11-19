@@ -36,6 +36,8 @@ public class Main extends javax.swing.JFrame {
         jButtonSalir = new javax.swing.JButton();
         semaforo1 = new net.ausiasmarch.semaforo.modelo.Semaforo();
         jButtonColor = new javax.swing.JButton();
+        jButtonIniciar = new javax.swing.JButton();
+        jButtonParar = new javax.swing.JButton();
 
         jButton2.setText("jButton2");
 
@@ -97,6 +99,22 @@ public class Main extends javax.swing.JFrame {
         });
         getContentPane().add(jButtonColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 310, 210, 50));
 
+        jButtonIniciar.setText("Iniciar");
+        jButtonIniciar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonIniciarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonIniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 380, -1, -1));
+
+        jButtonParar.setText("Parar");
+        jButtonParar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPararActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonParar, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 380, -1, -1));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -136,8 +154,22 @@ private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event
         semaforo1.cambiaColor();
     }//GEN-LAST:event_jButtonColorActionPerformed
 
-    private void activaDesactivaBotones(boolean sn) {
+    private void jButtonIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIniciarActionPerformed
+        activaDesactivaBotones(false);
+        jButtonIniciar.setEnabled(false);
+        semaforo1.iniciar();
+    }//GEN-LAST:event_jButtonIniciarActionPerformed
 
+    private void jButtonPararActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPararActionPerformed
+        activaDesactivaBotones(true);
+        jButtonIniciar.setEnabled(true);
+        semaforo1.parar();
+    }//GEN-LAST:event_jButtonPararActionPerformed
+
+    private void activaDesactivaBotones(boolean sn) {
+        jButtonVerde.setEnabled(sn);
+        jButtonRojo.setEnabled(false);
+        jButtonAmbar.setEnabled(false);
     }
 
     private void salir() {
@@ -174,6 +206,8 @@ private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButtonAmbar;
     private javax.swing.JButton jButtonColor;
+    private javax.swing.JButton jButtonIniciar;
+    private javax.swing.JButton jButtonParar;
     private javax.swing.JButton jButtonRojo;
     private javax.swing.JButton jButtonSalir;
     private javax.swing.JButton jButtonVerde;
